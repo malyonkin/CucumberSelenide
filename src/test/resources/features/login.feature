@@ -1,11 +1,17 @@
 Feature: Login User
-  Здесь должно быть описание к этому сценарию
+  Функциональность: Вход в систему по вкладке "Вход"
+  Как: Пользователь
+  Я хочу: Войти в свой аккаунт
+  Чтобы: Убрать надоедливую рекламу
 
   Scenario: Login user
-#    Given today is Sunday
-#    When I ask whether it's Friday yet
-#    Then Click "Log In" button
+    Given User is on Login Page
+    When User enters following credentials and submit
+      |Name       |Value      |
 
+      |Login      |test_user  |
+
+      |Password   |pass       |
     Then Input login
     Then Input password
     Then Click "submit" button
